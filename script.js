@@ -340,39 +340,21 @@ submitBtn.addEventListener('click',()=>{
 
 // let downloadBtn=document.querySelector('.download-btn');
 
-downloadBtn.addEventListener('click',async function () {
+downloadBtn.addEventListener('click',()=> {
     const resume = document.querySelector('.container');
-    const canvas = await html2canvas(resume);
-    const imgData = canvas.toDataURL('image/png');
-    const { jsPDF } = window.jspdf;
-    const pdf = new jsPDF();
-    const imgWidth = 190; 
-    const pageHeight = 297; 
-    const imgHeight = (canvas.height * imgWidth) / canvas.width;
-
-    let heightLeft = imgHeight;
-    let position = 0;
-
-    
-    while (heightLeft > 0) {
-        pdf.addImage(imgData, 'PNG', 10, position, imgWidth, imgHeight);
-        heightLeft -= pageHeight;
-        position -= pageHeight;
-        if (heightLeft > 0) {
-            pdf.addPage();
-        }
-    }
-    pdf.save('resume.pdf');
+    const options = {
+        margin: [0, 0.3, 0, 0.3], // Top, right, bottom, left margins set to 0
+        filename: "resume.pdf",
+        image: { type: "jpeg", quality: 0.98 },
+        html2canvas: {
+          scale: 2, // Higher scale for better quality
+          useCORS: true,
+          scrollY: 0, // Prevent vertical scrolling issues
+        },
+        jsPDF: { unit: "in", format: "a4", orientation: "portrait" },
+      };
+  
+      // Generate and save the PDF
+      html2pdf().set(options).from(resume).save();
 })
 
-//media query
-// const container = document.getElementById("container");
-//         const submitButton = document.getElementById("submitButton");
-
-// // Add event listener to the button
-//         submitButton.addEventListener("click", () => {
-//             // Check the device width
-//             if (window.innerWidth < 500) {
-//                 container.style.display = "block"; // Make the container visible
-//             }
-//         });
