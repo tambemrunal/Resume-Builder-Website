@@ -310,9 +310,14 @@ const educationSections = document.getElementById('education-sections');
 
         // max-width: 900px;
 
+
+
+
+
 let submitBtn=document.querySelector('#submit-btn');
 let displayContainer=document.querySelector('.form-container');
 let resumeContainer=document.querySelector('.resume-container');
+let ContainertoVisible=document.querySelector('.container');
 let downloadBtn=document.querySelector('.download-btn');
 // margin: 20px auto;
 submitBtn.addEventListener('click',()=>{
@@ -320,6 +325,15 @@ submitBtn.addEventListener('click',()=>{
     resumeContainer.style.maxWidth = "900px";
     resumeContainer.style.margin = "20px auto";
     downloadBtn.classList.remove('hidden');
+    if (window.innerWidth < 500) {
+        console.log('working');
+        console.log(ContainertoVisible.style.display);
+        ContainertoVisible.style.display = "block"; // Make the container visible
+        resumeContainer.style.display = "block"; // Make the container visible
+        ContainertoVisible.style.marginLeft = "1px"; // Make the container visible
+        ContainertoVisible.style.maxWidth = "100%"; // Make the container visible
+        
+    }
     // element.style.margin = "20px";
     console.log("submit-btn clicked");
 })
@@ -350,3 +364,15 @@ downloadBtn.addEventListener('click',async function () {
     }
     pdf.save('resume.pdf');
 })
+
+//media query
+// const container = document.getElementById("container");
+//         const submitButton = document.getElementById("submitButton");
+
+// // Add event listener to the button
+//         submitButton.addEventListener("click", () => {
+//             // Check the device width
+//             if (window.innerWidth < 500) {
+//                 container.style.display = "block"; // Make the container visible
+//             }
+//         });
