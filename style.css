@@ -1,0 +1,573 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:   #e8f5e9;;
+    display: flex;
+    height: 100vh;
+    overflow:auto; /* Prevent body scrolling */
+}
+
+.form-container, .resume-container {
+    flex: 1;
+    padding: 20px;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 100px 30px;
+    padding: 30px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: fit-content;
+}
+.form-container1 {
+    max-width: 600px;
+    margin: 35px 30px;
+    padding: 30px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: fit-content;
+}
+
+.resume-container {
+    /* background: #fff; */
+    background:  #e8f5e9;
+    height: 100%;
+    /* overflow-y: auto; Allows scrolling for the resume container */
+}
+
+ .resume-container h2 {
+    color: #2e7d32;
+    font-size: 20px;
+}
+.resume-container h1{
+    font-size: 35px;
+    color: #0d0d0d;
+    margin-bottom: -7px;
+}
+.resume-container .container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    max-width: 80%;
+    margin-left: 50px;
+    margin-bottom: 40px;
+}
+
+.form-heading {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    text-align: left; /* Left-aligned heading */
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    flex: 1;
+    margin: 0 10px 10px 0;
+    min-width: 45%; /* Ensures items stay side by side on larger screens */
+}
+
+
+.resume-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.resume-container input, .resume-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+    .resume-container button {
+        padding: 10px 20px;
+        font-size: 1.1em;
+        color: #fff;
+        background-color: #007bff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-left: 5%;
+        margin-bottom: 100px;
+    }
+
+
+.resume-container textarea {
+    resize: vertical;
+}
+
+.hidden {
+    display: none;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 5px;
+}
+
+.green-text {
+    color: #2e7d32;
+    font-size: 23px;
+}
+
+.form-group:last-child {
+    margin-right: 0; /* Remove margin on last item in row */
+}
+
+.full-width {
+    flex: 100%; /* Full width for textarea */
+}
+
+.form-container label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.form-container input, .form-container textarea {
+    width: 100%;
+    padding: 8px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-container textarea {
+    resize: vertical;
+}
+
+.form-footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.next-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.next-button:hover {
+    background-color: #0056b3;
+}
+.address p{
+    margin: 0; /* Remove default margins */
+    line-height: 1.2;
+}
+.address{
+    color:  #333;
+}
+
+
+/* skills container */
+.skills-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.skills-header {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f4f4f4;
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 0.9em;
+    max-width: 200px;
+}
+
+.skill-item span {
+    flex: 1;
+}
+
+.resume-skills .delete-btn {
+    cursor: pointer;
+    color: #d9534f;
+    font-size: 1.2em;
+    margin-left: 10px;
+}
+
+.add-skill-form {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.add-skill-form input[type="text"] {
+    flex: 1;
+    padding: 8px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.add-skill-form button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.add-skill-form button:hover {
+    background-color: #0056b3;
+}
+
+.resume-header {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.resume-skills {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.resume-skills ul {
+    list-style-type: disc;
+    margin: 0;
+    padding-left: 20px;
+    flex: 1;
+}
+
+.resume-skills li {
+    margin-bottom: 5px;
+}
+.skill-footer{
+    margin-top: 100px;
+    column-gap: 10px;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 10px;
+    display: none;
+}
+
+/* experience section */
+
+.experience-container h2 {
+    text-align: left;
+    margin: 1px 0px 20px 0px;
+    color: #333;
+}
+
+/* Container Styling */
+.experience-container {
+    max-width: 600px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+}
+
+/* Section Styling */
+.experience-container .section {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #fdfdfd;
+}
+
+.experience-container .form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.experience-container .form-row .form-group {
+    flex: 1;
+}
+
+.experience-container label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.experience-container input, .experience-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.experience-container textarea {
+    resize: none;
+}
+
+/* Button Styling */
+.experience-container button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.experience-container #add-section {
+    background-color: #007bff;
+    color: white;
+}
+
+.experience-container #add-section:hover {
+    background-color: #0056b3;
+}
+
+.experience-container .navigation-buttons button {
+    background-color: #007bff;
+    color: white;
+}
+
+.experience-container .navigation-buttons button:hover {
+    background-color: #0056b3;
+}
+
+#company-content{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+  /* company section */
+  .company-details{
+    display: flex;
+    column-gap: 5px;
+    font-size: 18px;
+  }
+
+  .Experience p{
+    margin: 0; /* Remove default margins */
+    line-height: 1.2;
+    }
+
+.Experience h2{
+    margin: 0; /* Remove default margins */
+    line-height: 2;
+}
+
+/* school form */
+.education-container h2 {
+    text-align: left;
+    margin: 1px 0px 20px 0px;
+    color: #333;
+}
+#school-content{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+.education-container .section{
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #fdfdfd;
+}
+
+/* Container Styling */
+.education-container {
+    max-width: 600px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+}
+
+.education-container .form-group {
+    margin-bottom: 15px;
+}
+
+.education-container label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.education-container input,.education-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.education-container textarea {
+    resize: none;
+}
+
+/* Flexbox for School Name and Location */
+.education-container .form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.education-container .form-row .form-group {
+    flex: 1;
+}
+
+/* Button Styling */
+.education-container button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 15px auto;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color:  #007bff;
+    color: white;
+    text-align: center;
+}
+
+.education-container button:hover {
+    background-color: #007bff;
+}
+
+.education-footer{
+    column-gap: 10px;
+}
+.school-details{
+    display: flex;
+    column-gap: 5px;
+    font-size: 18px;
+}
+
+.school-details-alignment p{
+    margin: 0; /* Remove default margins */
+    line-height: 1.2;
+}
+
+.school-details-alignment h{
+    margin: 0; /* Remove default margins */
+    line-height: 2;
+}
+
+/* award section */
+
+.Awards-form-container .form-container {
+    max-width: 700px;
+    margin: auto;
+    background: #fff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.Awards-form-container  h2 {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.Awards-form-container .form-group {
+    margin-bottom: 15px;
+}
+
+.Awards-form-container label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.Awards-form-container  input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.Awards-form-container .btn-container {
+    margin-top: 20px;
+}
+
+.Awards-form-container .add-btn, .Awards-form-container .submit-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.Awards-form-container .add-btn {
+    margin-bottom: 10px;
+}
+
+.Awards-form-container .add-btn:hover,.Awards-form-container  .submit-btn:hover {
+    background-color: #0056b3;
+}
+
+.Awards-form-container .extra-input {
+    margin-top: 10px;
+}
+
+.two-set-btn{
+    text-align: right;
+}
+
+
+/*  resume container*/
+#resume-title{
+    margin: 0;
+    line-height:2.3;
+}
+
+.header{
+    border-bottom: 2px solid #2e7d32;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}

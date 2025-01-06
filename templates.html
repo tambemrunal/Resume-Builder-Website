@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Template</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #f8f9fa, #e9ecef);
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* height: 100vh; */
+            padding: 2rem;
+            box-sizing: border-box;
+        }
+        .container {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            max-width: 900px;
+            width: 100%;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #212529;
+        }
+        .templates {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            width: 100%;
+        }
+        .template {
+            background: #ffffff;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .template:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        .template img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .template h3 {
+            margin: 0;
+            padding: 0.8rem;
+            text-align: center;
+            font-size: 1rem;
+            color: #495057;
+            background: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Choose Your Template</h1>
+        <div class="templates">
+            <div class="template" id="template1">
+                <img src="Resume images/img1.jpg" alt="Template 1">
+                <h3>Template 1</h3>
+            </div>
+            <div class="template" id="template2" >
+                <img src="Resume images/img2.jpg" alt="Template 2">
+                <h3>Template 2</h3>
+            </div>
+            <div class="template"id="template3" >
+                <img src="Resume images/img3.jpg" alt="Template 3">
+                <h3>Template 3</h3>
+            </div>
+            <div class="template" id="template4" >
+                <img src="Resume images/img4.jpg" alt="Template 4">
+                <h3>Template 4</h3>
+            </div>
+            <div class="template" id="template5" >
+                <img src="Resume images/img5.jpg" alt="Template 5">
+                <h3>Template 5</h3>
+            </div>
+            <div class="template" id="template6" >
+                <img src="Resume images/img6.jpg" alt="Template 6">
+                <h3>Template 6</h3>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let template1=document.getElementById("template1");
+        let template2=document.getElementById("template2");
+        let template3=document.getElementById("template3");
+        let template4=document.getElementById("template4");
+        let template5=document.getElementById("template5");
+        let template6=document.getElementById("template6");
+
+        // template1.addEventListener('click',()=>{
+        //     window.location.href = 'form1.html';
+        // })
+
+        template2.addEventListener('click',()=>{
+            window.location.href = 'main.html';
+        })
+
+    </script>
+</body>
+</html>

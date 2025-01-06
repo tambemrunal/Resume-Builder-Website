@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>research2.html</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <div class="step">
+        <h2 class="form-heading">Personal Details</h2>
+        <form>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                data-target="resume-name"
+                oninput="updateResume()"
+              />
+            </div>
+            <div class="form-group">
+              <label for="role">Role:</label>
+              <input
+                type="text"
+                id="role"
+                name="role"
+                placeholder="Enter your role"
+                data-target="resume-title"
+                oninput="updateResume()"
+              />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group full-width">
+              <label for="address">Address:</label>
+              <textarea
+                id="address"
+                name="address"
+                placeholder="Enter your address"
+                rows="3"
+                data-target="resume-contact"
+                oninput="updateResume()"
+              ></textarea>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="mobile">Mobile No:</label>
+              <input
+                type="tel"
+                id="mobile"
+                name="mobile"
+                placeholder="Enter your mobile number"
+                data-target="resume-mobileno"
+                oninput="updateResume()"
+              />
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                data-target="resume-email"
+                oninput="updateResume()"
+              />
+            </div>
+          </div>
+          <div class="form-footer">
+            <button type="button" class="next-button" onclick="nextStep()">
+              Next
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="step hidden">
+        <div class="skills-container">
+          <div class="skills-header">SKILLS</div>
+
+          <form class="add-skill-form" id="addSkillForm">
+            <input
+              type="text"
+              id="skillInput"
+              placeholder="Enter a skill"
+              required
+            />
+            <button type="submit">+ Add Skill</button>
+          </form>
+          <div class="error-message" id="errorMessage">
+            You can enter only 8 skills at most.
+          </div>
+          <div class="skills-list" id="skillsList"></div>
+          <div class="form-footer skill-footer">
+            <button type="button" class="next-button" onclick="prevStep()">
+              Previous
+            </button>
+            <button type="button" class="next-button" onclick="nextStep()">
+              Next
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="step hidden">
+        <div class="experience-container">
+          <h2>Experience</h2>
+          <div id="experience-sections">
+            <!-- Experience sections will appear here -->
+          </div>
+          <button id="add-section">+ Add Section</button>
+          <div class="form-footer">
+            <button type="button" class="next-button" onclick="prevStep()">
+              Previous
+            </button>
+            <button type="button" class="next-button" onclick="nextStep()">
+              Next
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="step hidden">
+        <div class="education-container">
+          <h2>Education</h2>
+          <div id="education-sections">
+            <!-- Dynamic Education Sections Will Appear Here -->
+          </div>
+          <button id="add-education-section">+ Add Section</button>
+        </div>
+        <div class="form-footer education-footer">
+          <button type="button" class="next-button" onclick="prevStep()">
+            Previous
+          </button>
+          <button type="button" class="next-button" onclick="nextStep()">
+            Next
+          </button>
+        </div>
+      </div>
+      <div class="step hidden">
+        <div class="Awards-form-container">
+          <h2>Awards and Certifications</h2>
+          <form>
+            <!-- First Input -->
+            <div class="form-group">
+              <label for="award1">Award/Certification 1:</label>
+              <input
+                type="text"
+                id="award1"
+                name="award"
+                placeholder="Enter award or certification"
+                data-target="award1-list-element"
+                oninput="updateResume()"
+              />
+            </div>
+
+            <!-- Second Input -->
+            <div class="form-group">
+              <label for="award2">Award/Certification 2:</label>
+              <input
+                type="text"
+                id="award2"
+                name="award"
+                placeholder="Enter award or certification"
+                data-target="award2-list-element"
+                oninput="updateResume()"
+              />
+            </div>
+
+            <!-- Extra Inputs Container -->
+            <div id="extra-inputs-container"></div>
+
+            <!-- Add Button -->
+            <div class="btn-container">
+              <button
+                type="button"
+                id="add-award-btn"
+                class="add-btn"
+                onclick="addInput()"
+              >
+                + Add Certification
+              </button>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="btn-container two-set-btn">
+              <!-- <button type="submit" class="submit-btn">Submit</button> -->
+              <button type="button" class="next-button" onclick="prevStep()">
+                Previous
+              </button>
+              <button type="button" id="submit-btn" class="next-button">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="resume-container">
+      <div class="container">
+        <div class="header">
+          <h1 id="resume-name">Casey Baumer</h1>
+          <p class="green-text" id="resume-title">Industrial Designer</p>
+          <div class="address">
+            <p id="resume-contact">123 Address St Anytown, NY 10011</p>
+            <p id="resume-mobileno">(123) 456-7890</p>
+            <p id="resume-email">no_reply@example.com</p>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>SKILLS</h2>
+          <div class="resume-skills">
+            <ul id="resumeSkillsLeft">
+              <!-- Left-side skills -->
+              <li>Skill1</li>
+              <li>Skill2</li>
+              <li>Skill3</li>
+              <li>Skill4</li>
+            </ul>
+            <ul id="resumeSkillsRight">
+              <!-- Right-side skills -->
+              <li>Skill1</li>
+              <li>Skill2</li>
+              <li>Skill3</li>
+              <li>Skill4</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="section Experience">
+          <h2>EXPERIENCE</h2>
+          <div id="company-content">
+            <div class="company-details">
+              <p id="company-name"><strong>Company Name,</strong></p>
+              <p id="company-location1"><strong>Location-</strong></p>
+              <p id="company-job-role"><strong>Job Title</strong></p>
+            </div>
+
+            <p id="company-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum, nulla. Atque quidem quod, neque vero voluptatum accusamus tenetur est. Consequuntur!</p>
+          </div>
+        </div>
+
+        <div class="section school-details-alignment">
+          <h2>EDUCATION</h2>
+          <!-- <p id="resume-education">School Name, Location - Degree<br>MONTH 20XX - MONTH 20XX<br>Lorem ipsum...</p> -->
+          <div id="school-content">
+            <div class="school-details">
+              <p id="school-name"><strong>School Name,</strong></p>
+              <p id="school-location"><strong>Location-</strong></p>
+              <p id="school-degree"><strong>Degree</strong></p>
+            </div>
+            <p id="school-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni ratione veritatis est error repellat hic.</p>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>AWARDS</h2>
+          <!-- <p id="resume-awards">Lorem ipsum...</p> -->
+          <ul id="resume-list">
+            <li id="award1-list-element">award1</li>
+            <li id="award2-list-element">award2</li>
+          </ul>
+        </div>
+      </div>
+      <button type="button" class="download-btn hidden">Download Resume</button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
